@@ -39,5 +39,5 @@ Ensure you have Ollama, specifically the Llama-3 model installed
 
 3.  ```bash
     install [dependencies]
-    python Query.py
+    python Query.py --query "ENTER QUERY HERE'
 
