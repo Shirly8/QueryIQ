@@ -2,7 +2,7 @@ import argparse
 from langchain_chroma import Chroma
 from langchain.prompts import ChatPromptTemplate
 from langchain_community.llms.ollama import Ollama
-from RAG import initialize_chroma
+from .RAG import initialize_chroma
 import re
 
 #To run: python3 QUERY.py --query "What time does Aretti open?"
@@ -41,16 +41,9 @@ def query_rag(query_text):
         response_text = generation_chunk.text
 
         print("Query Response: ", response_text)
-
-
-        # #Extract ttext using reegex
-        # match = re.search(r'text="([^"]*)"', response_text)
-        # if match:
-        #     text = match.group(1)
-        #     print("Query Response: ", text)
-        # else:
-        #     print("Sorry, we are unable to answer that")
-
+        return 
+    
+    return
 
 def main():
     parser = argparse.ArgumentParser(description="Process query with RAG")
